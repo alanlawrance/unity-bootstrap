@@ -8,16 +8,9 @@ public class Boot : MonoBehaviour
     void Update()
     {
         if (Input.anyKeyDown) {
-            LoadSceneAsync.Load("MainMenu", SceneLoadCompleteCallback);
+            LoadSceneAsync.Load("MainMenu", null);
         }
 
         LoadSceneAsync.UpdateManual();
-    }
-
-    private void SceneLoadCompleteCallback(bool success)
-    {
-        if (success) {
-            GameStateManager.BashState(GameState.MAIN_MENU);
-        }
     }
 }
