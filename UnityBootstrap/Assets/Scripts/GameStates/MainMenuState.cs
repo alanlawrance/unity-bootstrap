@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuStateManager
+public class MainMenuState
 {
     public static void AwakeManual()
     {

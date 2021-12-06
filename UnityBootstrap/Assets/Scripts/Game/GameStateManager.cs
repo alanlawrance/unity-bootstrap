@@ -65,10 +65,10 @@ public class GameStateManager
 
 		switch (m_GameState) {
             case GameState.MAIN_MENU:
-                MainMenuStateManager.UpdateManual();
+                MainMenuState.UpdateManual();
                 break;
 			case GameState.GAMEPLAY:
-				GamePlayStateManager.UpdateManual();
+				GamePlayState.UpdateManual();
 				break;
 			default:
 				Debug.LogErrorFormat("Unsupported game state: {0}", m_GameState.ToString());
@@ -82,7 +82,7 @@ public class GameStateManager
 			case GameState.MAIN_MENU:
 				break;
 			case GameState.GAMEPLAY:
-                GamePlayStateManager.LateUpdateManual();
+                GamePlayState.LateUpdateManual();
 				break;
 			default:
 				Debug.LogErrorFormat("Unsupported game state: {0}", m_GameState.ToString());
@@ -96,7 +96,7 @@ public class GameStateManager
 			case GameState.MAIN_MENU:
 				break;
 			case GameState.GAMEPLAY:
-				GamePlayStateManager.UpdateManual();
+				GamePlayState.UpdateManual();
 				break;
 			default:
 				Debug.LogErrorFormat("Unsupported game state: {0}", m_GameState.ToString());
@@ -120,10 +120,10 @@ public class GameStateManager
 	{
 		switch (newState) {
 			case GameState.MAIN_MENU:
-				MainMenuStateManager.Enter(prevState);
+				MainMenuState.Enter(prevState);
 				break;
 			case GameState.GAMEPLAY:
-				GamePlayStateManager.Enter(prevState);
+				GamePlayState.Enter(prevState);
 				break;
 			default:
 				Debug.LogErrorFormat("Unsupported game state: {0}", m_GameState.ToString());
@@ -135,10 +135,10 @@ public class GameStateManager
 	{
 		switch (currentState) {
 			case GameState.MAIN_MENU:
-				MainMenuStateManager.Exit(nextState);
+				MainMenuState.Exit(nextState);
 				break;
 			case GameState.GAMEPLAY:
-				GamePlayStateManager.Exit(nextState);
+				GamePlayState.Exit(nextState);
 				break;
 			default:
 				Debug.LogErrorFormat("Unsupported game state: {0}", m_GameState.ToString());
